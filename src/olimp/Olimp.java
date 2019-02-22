@@ -13,7 +13,11 @@ public class Olimp {
             String tochno = "";
             int i = 0;
             while (JOptionPane.showConfirmDialog(null, "Вы"+tochno+" уверены, что Вы хотели написать \""+Hello+"\", вместо \"Hello World\"?") != 1){
-                tochno += " точно";
+                if (i%30 < 15){
+                    tochno += " точно";
+                }else{
+                    tochno = tochno.replaceFirst(" точно", "");
+                }
                 i++;
             }
             Hello = "Hello World";
